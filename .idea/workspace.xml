@@ -34,7 +34,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="512ace0f-f445-4b19-b2ed-74b1a5aac563" name="Default" comment="" />
+    <list default="true" id="512ace0f-f445-4b19-b2ed-74b1a5aac563" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TextEditor.dir/LinkedList.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TextEditor.dir/LinkedList.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/TextEditor" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/TextEditor" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,8 +73,8 @@
       <file leaf-file-name="TextEditor.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TextEditor.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="108" column="24" lean-forward="true" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
+            <state relative-caret-position="350">
+              <caret line="88" column="20" lean-forward="true" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
               <folding>
                 <element signature="e#313#332#0" expanded="true" />
               </folding>
@@ -131,6 +134,9 @@
       <find>maxLineSize</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -160,6 +166,7 @@
     <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -227,12 +234,12 @@
       <option name="presentableId" value="Default" />
       <updated>1531889775315</updated>
       <workItem from="1531889776718" duration="2984000" />
-      <workItem from="1531970466748" duration="43752000" />
+      <workItem from="1531970466748" duration="44061000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46736000" />
+    <option name="totallyTimeSpent" value="47045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -243,7 +250,7 @@
       <window_info anchor="bottom" id="CMake" order="7" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32876712" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="right" id="LuaJ" order="3" />
@@ -413,8 +420,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TextEditor.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="108" column="24" lean-forward="true" selection-start-line="108" selection-start-column="24" selection-end-line="108" selection-end-column="24" />
+        <state relative-caret-position="350">
+          <caret line="88" column="20" lean-forward="true" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
           <folding>
             <element signature="e#313#332#0" expanded="true" />
           </folding>
