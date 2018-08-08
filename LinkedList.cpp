@@ -11,7 +11,7 @@
 using namespace std;
 
 /**
- * Node constructor that initializes prev to p, next to n, valIndex to 0, and valSize to 0.
+ * Node constructor.
  * @param p
  * @param n
  */
@@ -24,14 +24,18 @@ Node::Node(Node *p, Node *n) {
 }
 
 /**
- * LinkedList constructor that initializes the sentinel, currentPost to 0, and size to 0.
+ * LinkedList constructor.
  */
 LinkedList::LinkedList() {
+    /*
+     * Sets up first node
+     */
 	sentinel = new Node(0, 0);
     Node *x = new Node(sentinel, sentinel);
     sentinel->prev = x;
     sentinel->next = x;
     currentNode = x;
+
     tempPos = 1;
     cursorPos = 1;
     size = 1;
@@ -40,6 +44,7 @@ LinkedList::LinkedList() {
 
 /**
  * Adds char c to the currentNode's value array and increments currentNode's valIndex.
+ * If shifting over elements of value array, calls shiftChar().
  * If currentNode's value array is full, then adds a new Node to the LinkedList.
  * @param c
  */
@@ -70,6 +75,12 @@ void LinkedList::addChar(char c) {
     }
 }
 
+/**
+ * Replaces char d at tempValIndex in tempNode's value array with char c.
+ * Recursively calls itself with char d as parameter.
+ * If tempNode's value array is full, adds a new Node.
+ * @param c
+ */
 void LinkedList::shiftChar(char c) {
     if (tempNode->tempValIndex >= maxLineSize) {
         if (tempPos == size) {
@@ -112,6 +123,9 @@ void LinkedList::addNode(char c, Node *p) {
     }
 }
 
+/**
+ * Adds a Node.
+ */
 void LinkedList::addNode() {
     Node *x = new Node(currentNode, currentNode->next);
     currentNode->next->prev = x;
@@ -130,7 +144,6 @@ void LinkedList::removeChar() {
     if (size != 0) {
         if (currentNode->valIndex != 0) {
             currentNode->valIndex--;
-            //currentNode->tempValIndex--;
             currentNode->valSize--;
             currentNode->value[currentNode->valIndex] = '\0';
         } else {
@@ -167,6 +180,10 @@ void LinkedList::printList() {
     }
 }
 
+/**
+ * Converts contents of LinkedList to a string.
+ * @return
+ */
 std::string LinkedList::toString() {
     Node *ptr = sentinel->next;
     int i = 0;
@@ -204,17 +221,26 @@ Node* LinkedList::getCurrentNode() {
 }
 
 /**
- * Returns the currentPos (which is the index of the currentNode).
+ * Returns the cursorPos (which is the index of the currentNode).
  * @return
  */
 int LinkedList::getCursorPos() {
     return cursorPos;
 }
 
+/**
+ * Returns capacity of a Node's value array.
+ * @return
+ */
 int LinkedList::getMaxLineSize() {
     return maxLineSize;
 }
 
+/**
+ * Increases currentNode's valIndex and tempValIndex.
+ * If indices reach the end of the value array, currentNode changes to the next Node
+ * and indices are set to 0.
+ */
 void LinkedList::increaseIndex() {
     if (currentNode->valIndex == maxLineSize - 1) {
         if (cursorPos != size) {
@@ -234,18 +260,23 @@ void LinkedList::increaseIndex() {
     }
 }
 
+/**
+ * Decreases currentNode's valIndex and tempValIndex.
+ * If indices reach 0, currentNode changes to the previous Node
+ * and indices are set to maxLineSize.
+ */
 void LinkedList::decreaseIndex() {
     if (currentNode->valIndex == 0) {
         if (cursorPos != 1) {
             currentNode = currentNode->prev;
             cursorPos--;
-            currentNode->valIndex = maxLineSize;
-            currentNode->tempValIndex = maxLineSize;
+            currentNode->valIndex = maxLineSize - 1;
+            currentNode->tempValIndex = maxLineSize - 1;
         } else {
             currentNode = currentNode->prev->prev;  // to avoid the sentinel
             cursorPos = size;
-            currentNode->valIndex = maxLineSize;
-            currentNode->tempValIndex = maxLineSize;
+            currentNode->valIndex = maxLineSize - 1;
+            currentNode->tempValIndex = maxLineSize - 1;
         }
     } else {
         currentNode->valIndex--;
@@ -253,6 +284,9 @@ void LinkedList::decreaseIndex() {
     }
 }
 
+/**
+ * Sets currentNode to the next Node.
+ */
 void LinkedList::increaseCurrentNode() {
     if (cursorPos != size) {
         currentNode = currentNode->next;
@@ -263,6 +297,9 @@ void LinkedList::increaseCurrentNode() {
     }
 }
 
+/**
+ * Sets currentNode to the previous Node.
+ */
 void LinkedList::decreaseCurrentNode() {
     if (cursorPos != 0) {
         currentNode = currentNode->prev;

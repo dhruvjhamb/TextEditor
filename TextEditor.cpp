@@ -15,26 +15,45 @@
 
 using namespace std;
 
+/**
+ * TextEditor constructor.
+ */
 TextEditor::TextEditor() {
     list = new LinkedList();
 }
 
+/**
+ * Moves the cursor up a line.
+ */
 void TextEditor::moveUp() {
     list->decreaseCurrentNode();
 }
 
+/**
+ * Moves the cursor down a line.
+ */
 void TextEditor::moveDown() {
     list->increaseCurrentNode();
 }
 
+/**
+ * Moves the cursor left one space.
+ */
 void TextEditor::moveLeft() {
     list->decreaseIndex();
 }
 
+/**
+ * Moves the cursor right one space.
+ */
 void TextEditor::moveRight() {
     list->increaseIndex();
 }
 
+/**
+ * Saves the contents of list to a text file titled name.
+ * @param name
+ */
 void TextEditor::save(string name) {
     string fileContents = list->toString();
     ofstream saveFile (name);
@@ -44,6 +63,10 @@ void TextEditor::save(string name) {
     cout << endl;
 }
 
+/**
+ * Prints the contents of the text file name and loads the file's contents into list.
+ * @param name
+ */
 void TextEditor::load(string name) {
     list = new LinkedList();
     ifstream loadFile;
@@ -64,6 +87,10 @@ void TextEditor::load(string name) {
     }
 }
 
+/**
+ * Deletes text file name.
+ * @param name
+ */
 void TextEditor::deleteFile(string name) {
     const char * str = name.c_str();
     if (remove(str) != 0 ) {
@@ -74,37 +101,41 @@ void TextEditor::deleteFile(string name) {
     }
 }
 
+/**
+ * Types characters.
+ * @param characters
+ */
 void TextEditor::type(char characters[]) {
     for (int i = 0; characters[i] != '\0'; i++) {
         list->addChar(characters[i]);
     }
-    /**
-     * For testing purposes
-    list->printList();
-    cout << endl;
-     */
 }
 
+/**
+ * Deletes the last entered character.
+ */
 void TextEditor::backspace() {
     list->removeChar();
 }
 
+/**
+ * Creates a new line.
+ */
 void TextEditor::newLine() {
     list->addNode();
 }
 
+/**
+ * Returns the list.
+ * @return
+ */
 LinkedList* TextEditor::getList() {
     return list;
 }
 
 int main() {
     TextEditor *a = new TextEditor();
-    a->deleteFile("Save.txt");
-    a->type("abcd");
-    a->save("Save.txt");
-    a->load("Save.txt");
-    a->newLine();
-    a->type("hello");
-    a->save("Save.txt");
-    a->load("Save.txt");
+    a->type("Hello World!");
+    a->save("HelloWorld.txt");
+    a->load("HelloWorld.txt");
 }

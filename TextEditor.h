@@ -22,11 +22,14 @@ public:
     void moveDown();
     void moveLeft();
     void moveRight();
+
     void save(string name);
     void load(string name);
     void deleteFile(string name);
+
     void type(char characters[]);
     void backspace();
     void newLine();
+
     LinkedList* getList();
 };
