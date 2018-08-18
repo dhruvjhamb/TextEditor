@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/TextEditor.dir/main.cpp.o"
+  "CMakeFiles/TextEditor.dir/Input.cpp.o"
   "CMakeFiles/TextEditor.dir/LinkedList.cpp.o"
   "CMakeFiles/TextEditor.dir/TextEditor.cpp.o"
   "TextEditor.pdb"

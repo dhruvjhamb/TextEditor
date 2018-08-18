@@ -3,7 +3,7 @@ project(TextEditor)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp LinkedList.cpp LinkedList.h TextEditor.cpp TextEditor.h)
+set(SOURCE_FILES Input.cpp LinkedList.cpp LinkedList.h TextEditor.cpp TextEditor.h Input.h)
 add_executable(TextEditor ${SOURCE_FILES})
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake_modules")

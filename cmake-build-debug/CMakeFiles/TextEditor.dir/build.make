@@ -57,28 +57,28 @@ include CMakeFiles/TextEditor.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/TextEditor.dir/flags.make
 
-CMakeFiles/TextEditor.dir/main.cpp.o: CMakeFiles/TextEditor.dir/flags.make
-CMakeFiles/TextEditor.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dhruvjhamb/CLionProjects/TextEditor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TextEditor.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TextEditor.dir/main.cpp.o -c /Users/dhruvjhamb/CLionProjects/TextEditor/main.cpp
+CMakeFiles/TextEditor.dir/Input.cpp.o: CMakeFiles/TextEditor.dir/flags.make
+CMakeFiles/TextEditor.dir/Input.cpp.o: ../Input.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dhruvjhamb/CLionProjects/TextEditor/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TextEditor.dir/Input.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TextEditor.dir/Input.cpp.o -c /Users/dhruvjhamb/CLionProjects/TextEditor/Input.cpp
 
-CMakeFiles/TextEditor.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TextEditor.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dhruvjhamb/CLionProjects/TextEditor/main.cpp > CMakeFiles/TextEditor.dir/main.cpp.i
+CMakeFiles/TextEditor.dir/Input.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TextEditor.dir/Input.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/dhruvjhamb/CLionProjects/TextEditor/Input.cpp > CMakeFiles/TextEditor.dir/Input.cpp.i
 
-CMakeFiles/TextEditor.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TextEditor.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dhruvjhamb/CLionProjects/TextEditor/main.cpp -o CMakeFiles/TextEditor.dir/main.cpp.s
+CMakeFiles/TextEditor.dir/Input.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TextEditor.dir/Input.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/dhruvjhamb/CLionProjects/TextEditor/Input.cpp -o CMakeFiles/TextEditor.dir/Input.cpp.s
 
-CMakeFiles/TextEditor.dir/main.cpp.o.requires:
+CMakeFiles/TextEditor.dir/Input.cpp.o.requires:
 
-.PHONY : CMakeFiles/TextEditor.dir/main.cpp.o.requires
+.PHONY : CMakeFiles/TextEditor.dir/Input.cpp.o.requires
 
-CMakeFiles/TextEditor.dir/main.cpp.o.provides: CMakeFiles/TextEditor.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/TextEditor.dir/build.make CMakeFiles/TextEditor.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/TextEditor.dir/main.cpp.o.provides
+CMakeFiles/TextEditor.dir/Input.cpp.o.provides: CMakeFiles/TextEditor.dir/Input.cpp.o.requires
+	$(MAKE) -f CMakeFiles/TextEditor.dir/build.make CMakeFiles/TextEditor.dir/Input.cpp.o.provides.build
+.PHONY : CMakeFiles/TextEditor.dir/Input.cpp.o.provides
 
-CMakeFiles/TextEditor.dir/main.cpp.o.provides.build: CMakeFiles/TextEditor.dir/main.cpp.o
+CMakeFiles/TextEditor.dir/Input.cpp.o.provides.build: CMakeFiles/TextEditor.dir/Input.cpp.o
 
 
 CMakeFiles/TextEditor.dir/LinkedList.cpp.o: CMakeFiles/TextEditor.dir/flags.make
@@ -131,14 +131,14 @@ CMakeFiles/TextEditor.dir/TextEditor.cpp.o.provides.build: CMakeFiles/TextEditor
 
 # Object files for target TextEditor
 TextEditor_OBJECTS = \
-"CMakeFiles/TextEditor.dir/main.cpp.o" \
+"CMakeFiles/TextEditor.dir/Input.cpp.o" \
 "CMakeFiles/TextEditor.dir/LinkedList.cpp.o" \
 "CMakeFiles/TextEditor.dir/TextEditor.cpp.o"
 
 # External object files for target TextEditor
 TextEditor_EXTERNAL_OBJECTS =
 
-TextEditor: CMakeFiles/TextEditor.dir/main.cpp.o
+TextEditor: CMakeFiles/TextEditor.dir/Input.cpp.o
 TextEditor: CMakeFiles/TextEditor.dir/LinkedList.cpp.o
 TextEditor: CMakeFiles/TextEditor.dir/TextEditor.cpp.o
 TextEditor: CMakeFiles/TextEditor.dir/build.make
@@ -156,7 +156,7 @@ CMakeFiles/TextEditor.dir/build: TextEditor
 
 .PHONY : CMakeFiles/TextEditor.dir/build
 
-CMakeFiles/TextEditor.dir/requires: CMakeFiles/TextEditor.dir/main.cpp.o.requires
+CMakeFiles/TextEditor.dir/requires: CMakeFiles/TextEditor.dir/Input.cpp.o.requires
 CMakeFiles/TextEditor.dir/requires: CMakeFiles/TextEditor.dir/LinkedList.cpp.o.requires
 CMakeFiles/TextEditor.dir/requires: CMakeFiles/TextEditor.dir/TextEditor.cpp.o.requires
 

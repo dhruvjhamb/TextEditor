@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/Users/dhruvjhamb/CLionProjects/TextEditor/Input.cpp
+SFML/Graphics.hpp
+-
+iostream
+-
+string
+-
+sstream
+-
+TextEditor.h
+/Users/dhruvjhamb/CLionProjects/TextEditor/TextEditor.h
+
 /Users/dhruvjhamb/CLionProjects/TextEditor/LinkedList.cpp
 LinkedList.h
 /Users/dhruvjhamb/CLionProjects/TextEditor/LinkedList.h
@@ -33,14 +45,6 @@ LinkedList.h
 /Users/dhruvjhamb/CLionProjects/TextEditor/LinkedList.h
 iostream
 -
-
-/Users/dhruvjhamb/CLionProjects/TextEditor/main.cpp
-SFML/Graphics.hpp
--
-iostream
--
-LinkedList.h
-/Users/dhruvjhamb/CLionProjects/TextEditor/LinkedList.h
 
 /usr/local/include/SFML/Config.hpp
 TargetConditionals.h

@@ -102,6 +102,14 @@ void TextEditor::deleteFile(string name) {
 }
 
 /**
+ * Types character.
+ * @param characters
+ */
+void TextEditor::type(char character) {
+    list->addChar(character);
+}
+
+/**
  * Types characters.
  * @param characters
  */
@@ -133,9 +141,6 @@ LinkedList* TextEditor::getList() {
     return list;
 }
 
-int main() {
-    TextEditor *a = new TextEditor();
-    a->type("Hello World!");
-    a->save("HelloWorld.txt");
-    a->load("HelloWorld.txt");
+void TextEditor::clearList() {
+    list = new LinkedList();
 }

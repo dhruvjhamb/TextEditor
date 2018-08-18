@@ -27,9 +27,11 @@ public:
     void load(string name);
     void deleteFile(string name);
 
+    void type(char character);
     void type(char characters[]);
     void backspace();
     void newLine();
 
     LinkedList* getList();
+    void clearList();
 };

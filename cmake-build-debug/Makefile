@@ -123,6 +123,33 @@ TextEditor/fast:
 	$(MAKE) -f CMakeFiles/TextEditor.dir/build.make CMakeFiles/TextEditor.dir/build
 .PHONY : TextEditor/fast
 
+Input.o: Input.cpp.o
+
+.PHONY : Input.o
+
+# target to build an object file
+Input.cpp.o:
+	$(MAKE) -f CMakeFiles/TextEditor.dir/build.make CMakeFiles/TextEditor.dir/Input.cpp.o
+.PHONY : Input.cpp.o
+
+Input.i: Input.cpp.i
+
+.PHONY : Input.i
+
+# target to preprocess a source file
+Input.cpp.i:
+	$(MAKE) -f CMakeFiles/TextEditor.dir/build.make CMakeFiles/TextEditor.dir/Input.cpp.i
+.PHONY : Input.cpp.i
+
+Input.s: Input.cpp.s
+
+.PHONY : Input.s
+
+# target to generate assembly for a file
+Input.cpp.s:
+	$(MAKE) -f CMakeFiles/TextEditor.dir/build.make CMakeFiles/TextEditor.dir/Input.cpp.s
+.PHONY : Input.cpp.s
+
 LinkedList.o: LinkedList.cpp.o
 
 .PHONY : LinkedList.o
@@ -177,33 +204,6 @@ TextEditor.cpp.s:
 	$(MAKE) -f CMakeFiles/TextEditor.dir/build.make CMakeFiles/TextEditor.dir/TextEditor.cpp.s
 .PHONY : TextEditor.cpp.s
 
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/TextEditor.dir/build.make CMakeFiles/TextEditor.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/TextEditor.dir/build.make CMakeFiles/TextEditor.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/TextEditor.dir/build.make CMakeFiles/TextEditor.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -213,15 +213,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... TextEditor"
+	@echo "... Input.o"
+	@echo "... Input.i"
+	@echo "... Input.s"
 	@echo "... LinkedList.o"
 	@echo "... LinkedList.i"
 	@echo "... LinkedList.s"
 	@echo "... TextEditor.o"
 	@echo "... TextEditor.i"
 	@echo "... TextEditor.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 

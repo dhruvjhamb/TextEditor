@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/dhruvjhamb/CLionProjects/TextEditor/Input.cpp" "/Users/dhruvjhamb/CLionProjects/TextEditor/cmake-build-debug/CMakeFiles/TextEditor.dir/Input.cpp.o"
   "/Users/dhruvjhamb/CLionProjects/TextEditor/LinkedList.cpp" "/Users/dhruvjhamb/CLionProjects/TextEditor/cmake-build-debug/CMakeFiles/TextEditor.dir/LinkedList.cpp.o"
   "/Users/dhruvjhamb/CLionProjects/TextEditor/TextEditor.cpp" "/Users/dhruvjhamb/CLionProjects/TextEditor/cmake-build-debug/CMakeFiles/TextEditor.dir/TextEditor.cpp.o"
-  "/Users/dhruvjhamb/CLionProjects/TextEditor/main.cpp" "/Users/dhruvjhamb/CLionProjects/TextEditor/cmake-build-debug/CMakeFiles/TextEditor.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

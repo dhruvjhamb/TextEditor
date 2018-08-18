@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/dhruvjhamb/CLionProjects/TextEditor/Input.cpp">
+			<Option target="TextEditor"/>
+		</Unit>
+		<Unit filename="/Users/dhruvjhamb/CLionProjects/TextEditor/Input.h">
+			<Option target="TextEditor"/>
+		</Unit>
 		<Unit filename="/Users/dhruvjhamb/CLionProjects/TextEditor/LinkedList.cpp">
 			<Option target="TextEditor"/>
 		</Unit>
@@ -92,9 +98,6 @@
 			<Option target="TextEditor"/>
 		</Unit>
 		<Unit filename="/Users/dhruvjhamb/CLionProjects/TextEditor/TextEditor.h">
-			<Option target="TextEditor"/>
-		</Unit>
-		<Unit filename="/Users/dhruvjhamb/CLionProjects/TextEditor/main.cpp">
 			<Option target="TextEditor"/>
 		</Unit>
 		<Unit filename="/Users/dhruvjhamb/CLionProjects/TextEditor/CMakeLists.txt">

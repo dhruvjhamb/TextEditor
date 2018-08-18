@@ -15,7 +15,7 @@ using namespace std;
 class Node {
     friend class LinkedList;
 private:
-    char value[81] = "\0";    // Size corresponds to maxLineSize + 1
+    char value[81];    // Size corresponds to maxLineSize + 1
     Node *prev;
     Node *next;
     int valIndex;
@@ -25,6 +25,7 @@ private:
 public:
     Node(Node *p, Node *n);
     ~Node();
+    int getValIndex();
 };
 
 class LinkedList {
@@ -37,7 +38,7 @@ private:
 	int tempPos;
 	int cursorPos;
 	int size;
-	int maxLineSize = 80;
+	int maxLineSize;
 	bool shifting;
 
 public:

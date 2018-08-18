@@ -16,11 +16,18 @@ using namespace std;
  * @param n
  */
 Node::Node(Node *p, Node *n) {
+    for (int i = 0; i < 80; i++) {
+        value[i] = '\0';
+    }
     prev = p;
     next = n;
     valIndex = 0;
     tempValIndex = 0;
     valSize = 0;
+}
+
+int Node::getValIndex() {
+    return valIndex;
 }
 
 /**
@@ -36,6 +43,7 @@ LinkedList::LinkedList() {
     sentinel->next = x;
     currentNode = x;
 
+    maxLineSize = 80;
     tempPos = 1;
     cursorPos = 1;
     size = 1;
@@ -66,6 +74,7 @@ void LinkedList::addChar(char c) {
         }
         currentNode->value[currentNode->valIndex] = c;
         currentNode->valIndex++;
+        currentNode->valSize++;
         if (shifting) {
             tempNode = currentNode;
             tempNode->tempValIndex = currentNode->valIndex;
@@ -110,6 +119,7 @@ void LinkedList::shiftChar(char c) {
  * @param p
  */
 void LinkedList::addNode(char c, Node *p) {
+    p->value[maxLineSize] = '\n';
     Node *x = new Node(p, sentinel);
     sentinel->prev = x;
     p->next = x;
@@ -130,7 +140,7 @@ void LinkedList::addNode() {
     Node *x = new Node(currentNode, currentNode->next);
     currentNode->next->prev = x;
     currentNode->next = x;
-    currentNode->value[maxLineSize] = '\n';
+    //currentNode->value[maxLineSize] = '\n';
     currentNode = x;
     cursorPos++;
     size++;
@@ -141,12 +151,12 @@ void LinkedList::addNode() {
  * If currentNode's value array is empty, then removes the last Node.
  */
 void LinkedList::removeChar() {
-    if (size != 0) {
-        if (currentNode->valIndex != 0) {
-            currentNode->valIndex--;
-            currentNode->valSize--;
-            currentNode->value[currentNode->valIndex] = '\0';
-        } else {
+    if (currentNode->valIndex != 0) {
+        currentNode->valIndex--;
+        currentNode->valSize--;
+        currentNode->value[currentNode->valIndex] = '\0';
+    } else {
+        if (size != 1) {
             removeNode();
         }
     }
@@ -161,7 +171,7 @@ void LinkedList::removeNode() {
     currentNode->next = sentinel;
     sentinel->prev = currentNode;
     size--;
-    removeChar();
+    //removeChar();
 }
 
 /**
