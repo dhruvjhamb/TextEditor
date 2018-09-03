@@ -6,4 +6,4 @@ Features:
   2. Type characters, delete characters, create new lines.
   3. Supports saving, loading, and deleting text files.
 
-To test, use the main method of TextEditor.cpp.
+Uses SFML Library for front end user interface. 
