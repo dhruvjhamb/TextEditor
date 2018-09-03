@@ -57,14 +57,9 @@ int main()
            text.setString(te->getList()->toString());
            window.clear(sf::Color::Black);
 
-           text.setPosition(5, 5);     // top left
-            /**
-             * For centering text:
-             * text.setPosition(window.getSize().x/2 - text.getGlobalBounds().width/2,
-                             window.getSize().y/2 - text.getGlobalBounds().height/2);
-             */
-            window.draw(text);
-            window.display();
+           text.setPosition(5, 5);  // top left
+           window.draw(text);
+           window.display();
         }
     }
     return 0;
