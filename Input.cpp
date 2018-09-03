@@ -3,9 +3,6 @@
 #include <string>
 #include <sstream>
 #include "TextEditor.h"
-//#include "Input.h"
-//#include <curses.h>
-//#include <unistd.h>  /* only for sleep() */
 
 using namespace std;
 
@@ -28,15 +25,7 @@ int main()
                window.close();
            }
            if(event.type == sf::Event::TextEntered) {
-               /*if(showCursor) {
-                   char *c = new char[3];
-                   c[0] = (char) event.text.unicode;
-                   c[1] = '|';
-                   c[2] = '\0';
-                   te->type(c);
-               } else {*/
                te->type((char) event.text.unicode);
-               //}
            } else if (event.key.code == sf::Keyboard::BackSpace) {
                te->backspace();
            } else if (event.type == sf::Event::KeyPressed) {
@@ -67,22 +56,6 @@ int main()
            }
            text.setString(te->getList()->toString());
            window.clear(sf::Color::Black);
-           //sf::Text cursor ("|", font, 24);
-
-           /*
-            * Width of character = 5 pixels
-            * Height of character = 30 pixels
-            */
-           /*if (showCursor) {
-               int x = te->getList()->getCurrentNode()->getValIndex();
-               int y = te->getList()->getCursorPos();
-               cout << x << y << endl;
-               cursor.setPosition(12 * x, 5 + 30 * (y - 1));
-           }*/
-
-            //int x = te->getList()->getCurrentNode()->getValIndex();
-            //int y = te->getList()->getCursorPos();
-            //cout << x << ", " << y << endl;
 
            text.setPosition(5, 5);     // top left
             /**
@@ -91,10 +64,7 @@ int main()
                              window.getSize().y/2 - text.getGlobalBounds().height/2);
              */
             window.draw(text);
-            //window.draw(cursor);
             window.display();
-            cout << te->getList()->toString() << endl;
-            //te->getList()->printList();
         }
     }
     return 0;
